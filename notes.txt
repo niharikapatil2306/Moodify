@@ -1,0 +1,327 @@
+Microsoft Windows [Version 10.0.22621.2861]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify>django-admin startproject backend
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify>cd backend
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py startapp backendapp
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 09:02:18
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 09:02:46
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:01:32
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+^C
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>moment().get('day')moment().get('day')
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py createsupersuer
+Unknown command: 'createsupersuer'. Did you mean createsuperuser?
+Type 'manage.py help' for usage.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py createsuperuser
+Username (leave blank to use 'admin'):
+Email address: admin@example.com
+Password:
+Password (again):
+Superuser created successfully.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:03:15
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[04/Mar/2024 19:03:17] "GET / HTTP/1.1" 200 10629
+Not Found: /favicon.ico
+[04/Mar/2024 19:03:18] "GET /favicon.ico HTTP/1.1" 404 2111
+[04/Mar/2024 19:03:22] "GET /admin/ HTTP/1.1" 302 0
+[04/Mar/2024 19:03:22] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+[04/Mar/2024 19:03:22] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[04/Mar/2024 19:03:22] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[04/Mar/2024 19:03:22] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[04/Mar/2024 19:03:22] "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[04/Mar/2024 19:03:22] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[04/Mar/2024 19:03:22] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[04/Mar/2024 19:03:22] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[04/Mar/2024 19:03:25] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[04/Mar/2024 19:03:25] "GET /admin/ HTTP/1.1" 200 5533
+[04/Mar/2024 19:03:25] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[04/Mar/2024 19:03:25] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[04/Mar/2024 19:03:25] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:03:39
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\management\__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py", line 4
+
+    ^
+IndentationError: expected an indented block after class definition on line 3
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\management\__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py", line 4
+
+    ^
+IndentationError: expected an indented block after class definition on line 3
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:06:27
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:07:07
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:07:11
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:07:16
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\management\__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\apps\registry.py", line 124, in populate
+    app_config.ready()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\admin.py", line 4, in <module>
+    admin.site.register()
+TypeError: AdminSite.register() missing 1 required positional argument: 'model_or_iterable'
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend\backendapp\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:07:58
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+^C
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py makemigrations
+Migrations for 'backendapp':
+  backendapp\migrations\0001_initial.py
+    - Create model Mood
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, backendapp, contenttypes, sessions
+Running migrations:
+  Applying backendapp.0001_initial... OK
+
+C:\Users\Admin\Desktop\Desktop\Blogs\Modify\backend>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 04, 2024 - 19:08:34
+Django version 5.0.1, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[04/Mar/2024 19:08:36] "GET /admin/ HTTP/1.1" 200 6199
+[04/Mar/2024 19:08:55] "GET /admin/backendapp/mood/ HTTP/1.1" 200 7440
+[04/Mar/2024 19:08:56] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[04/Mar/2024 19:08:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[04/Mar/2024 19:08:56] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[04/Mar/2024 19:08:58] "GET /admin/ HTTP/1.1" 200 6199
+
+
+
+
+npm i axios
+
