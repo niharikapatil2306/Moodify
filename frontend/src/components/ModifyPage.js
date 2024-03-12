@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, FormSelect } from "react-bootstrap";
+import { Button, FormSelect, Pagination } from "react-bootstrap";
 import moment from 'moment';
 import axios from 'axios';
 
@@ -50,25 +50,26 @@ export default function MoodifyPage() {
     const [currentPage, setCurrentPage] = useState(0);
 
     const today = moment();
-    const initialPage = Math.floor((today.date() - 1) / 4);
+    const initialPage = Math.floor((today.date() - 1) / 10);
 
     const postData = () => {
+
         axios.post('http://127.0.0.1:8000/mood', {
             mood: mood,
             day: year.toString() + '-' + (month + 1).toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0')
         })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     };
 
     useEffect(() => {
         setDates(getMonthDatesString(month, year));
         setCurrentPage(initialPage);
-        if(mood!=""){
+        if (mood != "") {
             postData();
         }
     }, [month, year, mood]);
@@ -85,14 +86,14 @@ export default function MoodifyPage() {
     };
 
     const handleNextPage = () => {
-        if (currentPage < Math.ceil(dates.length / 4) - 1) { // Check for valid pages
+        if (currentPage < Math.ceil(dates.length / 10) - 1) { // Check for valid pages
             setCurrentPage(currentPage + 1);
         }
     };
 
     const getVisibleDates = () => {
-        const startIndex = currentPage * 4;
-        const endIndex = Math.min(startIndex + 4, dates.length);
+        const startIndex = currentPage * 10;
+        const endIndex = Math.min(startIndex + 10, dates.length);
         return dates.slice(startIndex, endIndex);
     };
 
@@ -108,18 +109,17 @@ export default function MoodifyPage() {
             </FormSelect>
 
             <div className="d-flex flex-wrap justify-content-center align-items-center my-2">
-                <Button variant="light" size="sm" onClick={handlePrevPage} disabled={currentPage === 0}>
-                    Prev
-                </Button>
-                {getVisibleDates().map((dateObj, index) => (
-                    <Button className="mx-2 bg-rose-300" key={index} value={dateObj}
-                        onClick={(e) => setDay(e.target.value)}>
-                        {dateObj}
-                    </Button>
-                ))}
-                <Button variant="light" size="sm" onClick={handleNextPage} disabled={currentPage === (Math.ceil(dates.length / 4) - 1)}>
-                    Next
-                </Button>
+
+                <Pagination className="mx-2 bg-rose-300" >
+                    <Pagination.Prev onClick={handlePrevPage} disabled={currentPage === 0} />
+                    {getVisibleDates().map((dateObj, index) => (
+                        <Pagination.Item key={index} value={dateObj}
+                            onClick={(e) => setDay(dateObj)}>
+                            {dateObj}
+                        </Pagination.Item>
+                    ))}
+                    <Pagination.Next onClick={handleNextPage} disabled={currentPage === (Math.ceil(dates.length / 10) - 1)} />
+                </Pagination>
             </div>
 
             <div className="flex flex-wrap justify-center">
